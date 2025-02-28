@@ -1,4 +1,4 @@
-// Card Selector
+// // Card Selector
 let numberCard = document.querySelector(".front-card .number");
 let month_year = document.querySelector(".month-year");
 let userName = document.querySelector(".name");
@@ -54,3 +54,5 @@ function normal() {
   cvcNumber.style.setProperty("--before-content", `"000" `);
   numberCard.textContent = "0000 0000 0000 0000";
 }
+
+ 

@@ -64,9 +64,10 @@ aside .back-card {
 aside .back-card::before {
   content: var(--before-content);
   position: absolute;
-  color: #313030;
+  color: #000000;
   top: 51%;
   left: 85%;
+  font-weight: 800;
   transform: translate(-51%, -80%);
   -webkit-transform: translate(-51%, -80%);
   -moz-transform: translate(-51%, -80%);
