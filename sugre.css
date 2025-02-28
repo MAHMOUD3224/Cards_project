@@ -51,6 +51,7 @@ aside {
 aside .cards {
   position: relative;
   color: #fff;
+  box-shadow: 1px 1px 45px 15px #000000;
 }
 aside .back-card {
   position: absolute;
@@ -65,7 +66,7 @@ aside .back-card::before {
   position: absolute;
   color: #313030;
   top: 51%;
-  left: 82%;
+  left: 85%;
   transform: translate(-51%, -80%);
   -webkit-transform: translate(-51%, -80%);
   -moz-transform: translate(-51%, -80%);
@@ -84,7 +85,7 @@ aside .back-card::before {
 }
 @media (max-width: 600px) {
   aside .back-card {
-    left: 79%;
+    left: 80%;
     transform: translate(-79%, 10%);
     -webkit-transform: translate(-79%, 10%);
     -moz-transform: translate(-79%, 10%);
@@ -122,7 +123,7 @@ aside .front-card {
   -moz-border-radius: 10px;
   -ms-border-radius: 10px;
   -o-border-radius: 10px;
-  box-shadow: 0px 50px 100px 20px var(--primary-color);
+  box-shadow: 0px 30px 80px 20px #1f0333ed;
 }
 @media (max-width: 1100px) {
   aside .front-card {
@@ -206,6 +207,7 @@ header main form .inp-parent {
 header main form .inp-parent label {
   font-family: monospace;
   margin-bottom: 5px;
+  margin-left: 4px;
   color: var(--primary-color);
   font-weight: 900;
 }
@@ -223,6 +225,7 @@ header main form .inp-parent input {
 @media (max-width: 400px) {
   header main form .inp-parent input {
     width: 90%;
+    margin: auto;
   }
 }
 
@@ -245,19 +248,20 @@ header main #button {
   margin: auto;
   border: none;
   cursor: pointer;
+  font-weight: bold;
   width: 90%;
   color: #fff;
   background: var(--primary-color);
   padding: 13px 0;
-  border-radius: 5px;
-  -webkit-border-radius: 5px;
-  -moz-border-radius: 5px;
-  -ms-border-radius: 5px;
-  -o-border-radius: 5px;
-  z-index: 5;
+  border-radius: 8px;
+  -webkit-border-radius: 8px;
+  -moz-border-radius: 8px;
+  -ms-border-radius: 8px;
+  -o-border-radius: 8px;
 }
 
 header main #button:hover {
+    background-color: #0d0225;
   opacity: 0.8;
   transition: 700ms;
   -webkit-transition: 700ms;
