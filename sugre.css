@@ -26,7 +26,7 @@ body {
   height: 100vh;
   justify-content: space-between;
 }
-@media (max-width: 1100px) {
+@media (max-width: 1200px) {
   .container {
     flex-direction: column;
   }
@@ -38,8 +38,12 @@ aside {
   background: url("./images/bg-main-desktop.png");
   box-shadow: 30px 0px 90px 10px var(--primary-color);
   background-size: cover;
+  background-repeat: no-repeat;
+  animation:ground 6s linear infinite alternate-reverse ;
+  -webkit-animation:ground 6s linear infinite alternate-reverse ;
 }
-@media (max-width: 1100px) {
+
+@media (max-width: 1200px) {
   aside {
     width: 100%;
     height: 300px;
@@ -64,7 +68,7 @@ aside .back-card {
 aside .back-card::before {
   content: var(--before-content);
   position: absolute;
-  color: #000000;
+  color: #494444;
   top: 51%;
   left: 85%;
   font-weight: 800;
@@ -74,7 +78,7 @@ aside .back-card::before {
   -ms-transform: translate(-51%, -80%);
   -o-transform: translate(-51%, -80%);
 }
-@media (max-width: 1100px) {
+@media (max-width: 1200px) {
   aside .back-card {
     left: 70%;
     transform: translate(-70%, 10%);
@@ -97,7 +101,7 @@ aside .back-card::before {
 aside div img {
   max-width: 330px;
 }
-@media (max-width: 1100px) {
+@media (max-width: 1200px) {
   aside div img {
     max-width: 270px;
   }
@@ -118,6 +122,7 @@ aside .front-card {
   background-image: url("images/bg-card-front.png");
   background-size: cover;
   margin-bottom: 30px;
+  min-width: 360px;
   padding: 20px;
   border-radius: 10px;
   -webkit-border-radius: 10px;
@@ -126,9 +131,10 @@ aside .front-card {
   -o-border-radius: 10px;
   box-shadow: 0px 30px 80px 20px #1f0333ed;
 }
-@media (max-width: 1100px) {
+@media (max-width: 1200px) {
   aside .front-card {
     z-index: 4;
+    min-width: auto;
     left: 50%;
     transform: translate(-50%, 30%);
     -webkit-transform: translate(-50%, 30%);
@@ -174,7 +180,7 @@ aside .front-card .number {
   font-size: 30px;
   margin: 40px auto 20px;
 }
-@media (max-width: 1100px) {
+@media (max-width: 1200px) {
   aside .front-card .number {
     font-size: 17px;
     margin: 20px auto;
@@ -188,7 +194,7 @@ header main {
   align-items: center;
   flex: 1;
 }
-@media (max-width: 1100px) {
+@media (max-width: 1200px) {
   header main {
     margin-bottom: 20px;
   }
@@ -225,7 +231,7 @@ header main form .inp-parent input {
 }
 @media (max-width: 400px) {
   header main form .inp-parent input {
-    width: 90%;
+    width: 95%;
     margin: auto;
   }
 }
