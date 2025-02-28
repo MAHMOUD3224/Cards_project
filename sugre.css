@@ -1,0 +1,301 @@
+/* start global rules */
+* {
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+}
+::selection {
+  background-color: #2d0351b0;
+  color: #fff;
+}
+html {
+  scroll-behavior: smooth;
+}
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+:root {
+  --primary-color: #2d0351;
+  --before-content: "000";
+}
+
+/* End global rules */
+
+.container {
+  display: flex;
+  height: 100vh;
+  justify-content: space-between;
+}
+@media (max-width: 1100px) {
+  .container {
+    flex-direction: column;
+  }
+}
+
+/* Start Aside */
+aside {
+  width: 35%;
+  background: url("./images/bg-main-desktop.png");
+  box-shadow: 30px 0px 90px 10px var(--primary-color);
+  background-size: cover;
+}
+@media (max-width: 1100px) {
+  aside {
+    width: 100%;
+    height: 300px;
+    margin-bottom: 90px;
+    background: url("./images/bg-main-mobile.png");
+    background-size: cover;
+  }
+}
+aside .cards {
+  position: relative;
+  color: #fff;
+}
+aside .back-card {
+  position: absolute;
+  transform: translate(70%, 190%);
+  -webkit-transform: translate(70%, 190%);
+  -moz-transform: translate(70%, 190%);
+  -ms-transform: translate(70%, 190%);
+  -o-transform: translate(70%, 190%);
+}
+aside .back-card::before {
+  content: var(--before-content);
+  position: absolute;
+  color: #313030;
+  top: 51%;
+  left: 82%;
+  transform: translate(-51%, -80%);
+  -webkit-transform: translate(-51%, -80%);
+  -moz-transform: translate(-51%, -80%);
+  -ms-transform: translate(-51%, -80%);
+  -o-transform: translate(-51%, -80%);
+}
+@media (max-width: 1100px) {
+  aside .back-card {
+    left: 70%;
+    transform: translate(-70%, 10%);
+    -webkit-transform: translate(-70%, 10%);
+    -moz-transform: translate(-70%, 10%);
+    -ms-transform: translate(-70%, 10%);
+    -o-transform: translate(-70%, 10%);
+  }
+}
+@media (max-width: 600px) {
+  aside .back-card {
+    left: 79%;
+    transform: translate(-79%, 10%);
+    -webkit-transform: translate(-79%, 10%);
+    -moz-transform: translate(-79%, 10%);
+    -ms-transform: translate(-79%, 10%);
+    -o-transform: translate(-79%, 10%);
+  }
+}
+aside div img {
+  max-width: 330px;
+}
+@media (max-width: 1100px) {
+  aside div img {
+    max-width: 270px;
+  }
+}
+@media (max-width: 600px) {
+  aside div img {
+    max-width: 260px;
+  }
+}
+
+aside .front-card {
+  position: absolute;
+  transform: translate(50%, 50%);
+  -webkit-transform: translate(50%, 50%);
+  -moz-transform: translate(50%, 50%);
+  -ms-transform: translate(50%, 50%);
+  -o-transform: translate(50%, 50%);
+  background-image: url("images/bg-card-front.png");
+  background-size: cover;
+  margin-bottom: 30px;
+  padding: 20px;
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+  box-shadow: 0px 50px 100px 20px var(--primary-color);
+}
+@media (max-width: 1100px) {
+  aside .front-card {
+    z-index: 4;
+    left: 50%;
+    transform: translate(-50%, 30%);
+    -webkit-transform: translate(-50%, 30%);
+    -moz-transform: translate(-50%, 30%);
+    -ms-transform: translate(-50%, 30%);
+    -o-transform: translate(-50%, 30%);
+  }
+}
+@media (max-width: 800px) {
+  aside .front-card {
+    z-index: 4;
+    left: 43%;
+    transform: translate(-43%, 30%);
+    -webkit-transform: translate(-43%, 30%);
+    -moz-transform: translate(-43%, 30%);
+    -ms-transform: translate(-43%, 30%);
+    -o-transform: translate(-43%, 30%);
+  }
+}
+@media (max-width: 650px) {
+  aside .front-card {
+    padding: 15px;
+    left: 15%;
+    transform: translate(-17%, 30%);
+    -webkit-transform: translate(-17%, 30%);
+    -moz-transform: translate(-17%, 30%);
+    -ms-transform: translate(-17%, 30%);
+    -o-transform: translate(-17%, 30%);
+  }
+}
+
+aside .front-card footer {
+  min-width: 300px;
+  display: flex;
+  justify-content: space-between;
+}
+@media (max-width: 600px) {
+  aside .front-card footer {
+    min-width: 250px;
+  }
+}
+aside .front-card .number {
+  font-size: 30px;
+  margin: 40px auto 20px;
+}
+@media (max-width: 1100px) {
+  aside .front-card .number {
+    font-size: 17px;
+    margin: 20px auto;
+  }
+}
+
+/* End Aside */
+header main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex: 1;
+}
+@media (max-width: 1100px) {
+  header main {
+    margin-bottom: 20px;
+  }
+}
+header main form .inp-parent {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+  max-width: 500px;
+  text-transform: uppercase;
+}
+@media (max-width: 600px) {
+  header main form .inp-parent {
+    max-width: 345px;
+  }
+}
+header main form .inp-parent label {
+  font-family: monospace;
+  margin-bottom: 5px;
+  color: var(--primary-color);
+  font-weight: 900;
+}
+header main form .inp-parent input {
+  font-size: 16px;
+  padding: 8px;
+  outline: none;
+  border: 1px solid #999;
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+}
+@media (max-width: 400px) {
+  header main form .inp-parent input {
+    width: 90%;
+  }
+}
+
+header main form .history {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+header main form .history .inp-history {
+  display: flex;
+  flex-direction: column;
+  width: calc((100% / 3) - 10px);
+}
+header main form .history input {
+  height: 100%;
+}
+header main #button {
+  display: block;
+  margin: auto;
+  border: none;
+  cursor: pointer;
+  width: 90%;
+  color: #fff;
+  background: var(--primary-color);
+  padding: 13px 0;
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+  z-index: 5;
+}
+
+header main #button:hover {
+  opacity: 0.8;
+  transition: 700ms;
+  -webkit-transition: 700ms;
+  -moz-transition: 700ms;
+  -ms-transition: 700ms;
+  -o-transition: 700ms;
+}
+
+/* complete  State*/
+.complete {
+  padding: 30px 20px;
+  min-width: 360px;
+  flex-direction: column;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  background-color: #ac3ced29;
+  border-radius: 15px;
+  -webkit-border-radius: 15px;
+  -moz-border-radius: 15px;
+  -ms-border-radius: 15px;
+  -o-border-radius: 15px;
+}
+@media (max-width: 500px) {
+  .complete {
+    padding: 20px;
+    min-width: 330px;
+  }
+}
+.complete .icon img {
+  width: 70px;
+}
+.complete h1 {
+  margin: 10px auto 10px;
+  text-transform: uppercase;
+  font-weight: 500;
+}
+.complete p {
+  margin: 0px auto 25px;
+  color: #666;
+}
