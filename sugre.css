@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap');
 /* start global rules */
 * {
   box-sizing: border-box;
@@ -5,17 +6,17 @@
   -moz-box-sizing: border-box;
 }
 ::selection {
-  background-color: #2d0351b0;
+  background-color: #bebebeb0;
   color: #fff;
 }
 html {
   scroll-behavior: smooth;
 }
 body {
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: "Space Grotesk", serif;
 }
 :root {
-  --primary-color: #2d0351;
+  --primary-color: #21033a;
   --before-content: "000";
 }
 
@@ -34,7 +35,7 @@ body {
 
 /* Start Aside */
 aside {
-  width: 35%;
+  width: 28%;
   background: url("./images/bg-main-desktop.png");
   box-shadow: 30px 0px 90px 10px var(--primary-color);
   background-size: cover;
@@ -46,7 +47,7 @@ aside {
 @media (max-width: 1200px) {
   aside {
     width: 100%;
-    height: 300px;
+    min-height: 30%;
     margin-bottom: 90px;
     background: url("./images/bg-main-mobile.png");
     background-size: cover;
@@ -56,14 +57,15 @@ aside .cards {
   position: relative;
   color: #fff;
   box-shadow: 1px 1px 45px 15px #000000;
+  max-width: 100%;
 }
 aside .back-card {
   position: absolute;
-  transform: translate(70%, 190%);
-  -webkit-transform: translate(70%, 190%);
-  -moz-transform: translate(70%, 190%);
-  -ms-transform: translate(70%, 190%);
-  -o-transform: translate(70%, 190%);
+  transform: translate(30%, 123%);
+  -webkit-transform: translate(30%, 123%);
+  -moz-transform: translate(30%, 123%);
+  -ms-transform: translate(30%, 123%);
+  -o-transform: translate(30%, 123%);
 }
 aside .back-card::before {
   content: var(--before-content);
@@ -98,91 +100,110 @@ aside .back-card::before {
     -o-transform: translate(-79%, 10%);
   }
 }
-aside div img {
-  max-width: 330px;
+aside .back-card img {
+  max-width: 420px;
 }
 @media (max-width: 1200px) {
-  aside div img {
-    max-width: 270px;
+  aside .back-card img {
+    max-width: 300px;
   }
 }
 @media (max-width: 600px) {
-  aside div img {
+  aside .back-card img {
     max-width: 260px;
   }
 }
 
 aside .front-card {
   position: absolute;
-  transform: translate(50%, 50%);
-  -webkit-transform: translate(50%, 50%);
-  -moz-transform: translate(50%, 50%);
-  -ms-transform: translate(50%, 50%);
-  -o-transform: translate(50%, 50%);
+  transform: translate(17%, 15%);
+  -webkit-transform: translate(17%, 15%);
+  -moz-transform: translate(17%, 15%);
+  -ms-transform: translate(17%, 15%);
+  -o-transform: translate(17%, 15%);
   background-image: url("images/bg-card-front.png");
   background-size: cover;
-  margin-bottom: 30px;
-  min-width: 360px;
-  padding: 20px;
-  border-radius: 10px;
-  -webkit-border-radius: 10px;
-  -moz-border-radius: 10px;
-  -ms-border-radius: 10px;
-  -o-border-radius: 10px;
+  min-width: 420px;
+  min-height: 240px;
+  padding: 20px 30px;
+  border-radius:10px;
+  -webkit-border-radius:10px;
+  -moz-border-radius:10px;
+  -ms-border-radius:10px;
+  -o-border-radius:10px;
   box-shadow: 0px 30px 80px 20px #1f0333ed;
+  animation: backGroundColor 5s linear  infinite forwards alternate;
+  -webkit-animation: backGroundColor 5s linear  infinite forwards alternate;
+}
+@keyframes backGroundColor {
+100%{
+    background-size: 150%;
+    background-repeat: no-repeat;
+    }
 }
 @media (max-width: 1200px) {
   aside .front-card {
     z-index: 4;
-    min-width: auto;
     left: 50%;
-    transform: translate(-50%, 30%);
-    -webkit-transform: translate(-50%, 30%);
-    -moz-transform: translate(-50%, 30%);
-    -ms-transform: translate(-50%, 30%);
-    -o-transform: translate(-50%, 30%);
-  }
+    padding: 20px;
+    min-height: auto;
+    min-width: 350px;
+    transform: translate(-50%, 15%);
+    -webkit-transform: translate(-50%, 15%);
+    -moz-transform: translate(-50%, 15%);
+    -ms-transform: translate(-50%, 15%);
+    -o-transform: translate(-50%, 15%);
+}
 }
 @media (max-width: 800px) {
   aside .front-card {
-    z-index: 4;
+    padding: 14px;
     left: 43%;
-    transform: translate(-43%, 30%);
-    -webkit-transform: translate(-43%, 30%);
-    -moz-transform: translate(-43%, 30%);
-    -ms-transform: translate(-43%, 30%);
-    -o-transform: translate(-43%, 30%);
+    min-width: 320px;
+    transform: translate(-43%, 20%);
+    -webkit-transform: translate(-43%, 20%);
+    -moz-transform: translate(-43%, 20%);
+    -ms-transform: translate(-43%, 20%);
+    -o-transform: translate(-43%, 20%);
   }
-}
-@media (max-width: 650px) {
-  aside .front-card {
-    padding: 15px;
-    left: 15%;
-    transform: translate(-17%, 30%);
-    -webkit-transform: translate(-17%, 30%);
-    -moz-transform: translate(-17%, 30%);
-    -ms-transform: translate(-17%, 30%);
-    -o-transform: translate(-17%, 30%);
-  }
-}
-
-aside .front-card footer {
-  min-width: 300px;
-  display: flex;
-  justify-content: space-between;
 }
 @media (max-width: 600px) {
+  aside .front-card {
+    padding: 15px;
+    min-width: 275px;
+    min-height: 160px;
+    left: 13%;
+    transform: translate(-13%, 20%);
+    -webkit-transform: translate(-13%, 20%);
+    -moz-transform: translate(-13%, 20%);
+    -ms-transform: translate(-13%, 20%);
+    -o-transform: translate(-13%, 20%);
+}
+}
+aside .front-card .logo img{
+  width: 60px;
+}
+
+
+aside .front-card footer {
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  text-transform: uppercase;
+  bottom: -25px;
+}
+@media (max-width: 1200px) {
   aside .front-card footer {
-    min-width: 250px;
+    bottom: -5px;
   }
 }
 aside .front-card .number {
-  font-size: 30px;
-  margin: 40px auto 20px;
+  font-size: 25px;
+  margin: 70px auto 20px;
 }
 @media (max-width: 1200px) {
   aside .front-card .number {
-    font-size: 17px;
+    font-size: 20px;
     margin: 20px auto;
   }
 }
@@ -190,13 +211,16 @@ aside .front-card .number {
 /* End Aside */
 header main {
   display: flex;
-  justify-content: center;
+  justify-content: end;
   align-items: center;
   flex: 1;
+  padding-right: 60px;
 }
 @media (max-width: 1200px) {
   header main {
-    margin-bottom: 20px;
+    padding-right: 0;
+    padding-bottom: 20px;
+    justify-content: center;
   }
 }
 header main form .inp-parent {
@@ -215,8 +239,8 @@ header main form .inp-parent label {
   font-family: monospace;
   margin-bottom: 5px;
   margin-left: 4px;
+  font-size: 17px;
   color: var(--primary-color);
-  font-weight: 900;
 }
 header main form .inp-parent input {
   font-size: 16px;
@@ -245,18 +269,19 @@ header main form .history {
 header main form .history .inp-history {
   display: flex;
   flex-direction: column;
-  width: calc((100% / 3) - 10px);
+  width: calc((100% / 4) - 10px);
 }
-header main form .history input {
-  height: 100%;
+header main form .history .inp-history:last-child {
+  flex-grow: 1;
 }
+
 header main #button {
   display: block;
   margin: auto;
   border: none;
   cursor: pointer;
   font-weight: bold;
-  width: 90%;
+  width: 100%;
   color: #fff;
   background: var(--primary-color);
   padding: 13px 0;
@@ -268,8 +293,7 @@ header main #button {
 }
 
 header main #button:hover {
-    background-color: #0d0225;
-  opacity: 0.8;
+  opacity: 0.9;
   transition: 700ms;
   -webkit-transition: 700ms;
   -moz-transition: 700ms;
