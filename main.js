@@ -42,7 +42,7 @@ card_form.addEventListener("submit", function (ele) {
   });
   ele.preventDefault(); // منع إعادة تحميل الصفحة
 });
-let btn = document.querySelector(".btn");
+let btn = document.querySelector(".button");
 
 btn.onclick = normal;
 
