@@ -258,22 +258,23 @@ header main .button {
   -moz-border-radius: 8px;
   -ms-border-radius: 8px;
   -o-border-radius: 8px;
+  transition: 300ms ease-in-out;
+  -webkit-transition: 300ms ease-in-out;
+  -moz-transition: 300ms ease-in-out;
+  -ms-transition: 300ms ease-in-out;
+  -o-transition: 300ms ease-in-out;
 }
 
 header main .button:hover {
   background: #20095f;
   box-shadow: 0 10px 15px #868080;
-  transition: 300ms;
-  -webkit-transition: 300ms;
-  -moz-transition: 300ms;
-  -ms-transition: 300ms;
-  -o-transition: 300ms;
+
 }
 
 /* complete  State*/
 .complete {
   padding: 30px 20px;
-  min-width: 360px;
+  width: 550px;
   flex-direction: column;
   display: none;
   justify-content: center;
@@ -288,7 +289,7 @@ header main .button:hover {
 @media (max-width: 500px) {
   .complete {
     padding: 20px;
-    min-width: 330px;
+    width: 95%;
   }
 }
 .complete .icon img {
