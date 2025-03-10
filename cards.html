@@ -34,7 +34,7 @@
         <main>
           <form action="" id="card_form">
             <div class="inp-parent">
-              <label for="Cardholder Name">Cardholder Name</label>
+              <label for="cardName">Cardholder Name</label>
               <input
                 type="text"
                 required
@@ -44,7 +44,7 @@
               />
             </div>
             <div class="inp-parent">
-              <label for="Card Number">Card Number</label>
+              <label for="cardNumber">Card Number</label>
               <input
                 type="text"
                 required
@@ -58,10 +58,11 @@
             <div class="inp-parent">
               <div class="history">
                 <div class="inp-history">
-                  <label for="(MM)">(MM)</label>
+                  <label for="MM">(MM)</label>
                   <input
                     type="text"
                     required
+                    id="MM"
                     name="month"
                     maxlength="2"
                     class="inputs"
@@ -69,10 +70,11 @@
                   />
                 </div>
                 <div class="inp-history">
-                  <label for="(YY)"> (YY)</label>
+                  <label for="YY">(YY)</label>
                   <input
                     type="text"
                     required
+                    id="YY"
                     name="year"
                     maxlength="4"
                     placeholder="YY"
@@ -93,7 +95,7 @@
                 </div>
               </div>
             </div>
-            <input type="submit" id="button" value="Confirm" />
+            <input type="submit" class="button" value="Confirm" />
           </form>
           <div class="complete">
             <div class="icon">
@@ -101,7 +103,7 @@
             </div>
             <h1>thank You!</h1>
             <p>We've added your card details</p>
-            <button id="button" class="btn">Continue</button>
+            <button class="btn button">Continue</button>
           </div>
         </main>
       </div>

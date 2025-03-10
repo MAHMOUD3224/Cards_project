@@ -62,10 +62,6 @@ aside .cards {
 aside .back-card {
   position: absolute;
   transform: translate(30%, 123%);
-  -webkit-transform: translate(30%, 123%);
-  -moz-transform: translate(30%, 123%);
-  -ms-transform: translate(30%, 123%);
-  -o-transform: translate(30%, 123%);
 }
 aside .back-card::before {
   content: var(--before-content);
@@ -75,29 +71,20 @@ aside .back-card::before {
   left: 85%;
   font-weight: 800;
   transform: translate(-51%, -80%);
-  -webkit-transform: translate(-51%, -80%);
-  -moz-transform: translate(-51%, -80%);
-  -ms-transform: translate(-51%, -80%);
-  -o-transform: translate(-51%, -80%);
+
 }
 @media (max-width: 1200px) {
   aside .back-card {
     left: 70%;
     transform: translate(-70%, 10%);
-    -webkit-transform: translate(-70%, 10%);
-    -moz-transform: translate(-70%, 10%);
-    -ms-transform: translate(-70%, 10%);
-    -o-transform: translate(-70%, 10%);
+
   }
 }
 @media (max-width: 600px) {
   aside .back-card {
     left: 80%;
     transform: translate(-79%, 10%);
-    -webkit-transform: translate(-79%, 10%);
-    -moz-transform: translate(-79%, 10%);
-    -ms-transform: translate(-79%, 10%);
-    -o-transform: translate(-79%, 10%);
+
   }
 }
 aside .back-card img {
@@ -117,10 +104,6 @@ aside .back-card img {
 aside .front-card {
   position: absolute;
   transform: translate(17%, 15%);
-  -webkit-transform: translate(17%, 15%);
-  -moz-transform: translate(17%, 15%);
-  -ms-transform: translate(17%, 15%);
-  -o-transform: translate(17%, 15%);
   background-image: url("images/bg-card-front.png");
   background-size: cover;
   min-width: 420px;
@@ -132,15 +115,9 @@ aside .front-card {
   -ms-border-radius:10px;
   -o-border-radius:10px;
   box-shadow: 0px 30px 80px 20px #1f0333ed;
-  animation: backGroundColor 5s linear  infinite forwards alternate;
-  -webkit-animation: backGroundColor 5s linear  infinite forwards alternate;
+
 }
-@keyframes backGroundColor {
-100%{
-    background-size: 150%;
-    background-repeat: no-repeat;
-    }
-}
+
 @media (max-width: 1200px) {
   aside .front-card {
     z-index: 4;
@@ -149,36 +126,24 @@ aside .front-card {
     min-height: auto;
     min-width: 350px;
     transform: translate(-50%, 15%);
-    -webkit-transform: translate(-50%, 15%);
-    -moz-transform: translate(-50%, 15%);
-    -ms-transform: translate(-50%, 15%);
-    -o-transform: translate(-50%, 15%);
+
 }
 }
 @media (max-width: 800px) {
   aside .front-card {
-    padding: 14px;
+    padding: 15px;
     left: 43%;
     min-width: 320px;
     transform: translate(-43%, 20%);
-    -webkit-transform: translate(-43%, 20%);
-    -moz-transform: translate(-43%, 20%);
-    -ms-transform: translate(-43%, 20%);
-    -o-transform: translate(-43%, 20%);
+
   }
 }
 @media (max-width: 600px) {
   aside .front-card {
-    padding: 15px;
-    min-width: 275px;
+    min-width: 260px;
     min-height: 160px;
-    left: 13%;
-    transform: translate(-13%, 20%);
-    -webkit-transform: translate(-13%, 20%);
-    -moz-transform: translate(-13%, 20%);
-    -ms-transform: translate(-13%, 20%);
-    -o-transform: translate(-13%, 20%);
-}
+    left: 12%;
+    transform: translate(-12%, 20%);}
 }
 aside .front-card .logo img{
   width: 60px;
@@ -223,17 +188,19 @@ header main {
     justify-content: center;
   }
 }
-header main form .inp-parent {
-  display: flex;
-  flex-direction: column;
-  margin-bottom: 20px;
-  max-width: 500px;
-  text-transform: uppercase;
+header main form{
+  max-width: 560px;
 }
 @media (max-width: 600px) {
-  header main form .inp-parent {
-    max-width: 345px;
+  header main form {
+    max-width: 90%;
   }
+}
+header main form .inp-parent {
+      display: flex;
+      flex-direction: column;
+      margin-bottom: 20px;
+      text-transform: uppercase;
 }
 header main form .inp-parent label {
   font-family: monospace;
@@ -244,7 +211,7 @@ header main form .inp-parent label {
 }
 header main form .inp-parent input {
   font-size: 16px;
-  padding: 8px;
+  padding:10px 8px;
   outline: none;
   border: 1px solid #999;
   border-radius: 5px;
@@ -275,7 +242,7 @@ header main form .history .inp-history:last-child {
   flex-grow: 1;
 }
 
-header main #button {
+header main .button {
   display: block;
   margin: auto;
   border: none;
@@ -283,6 +250,7 @@ header main #button {
   font-weight: bold;
   width: 100%;
   color: #fff;
+  box-shadow: 0 5px 5px #868080;
   background: var(--primary-color);
   padding: 13px 0;
   border-radius: 8px;
@@ -292,13 +260,14 @@ header main #button {
   -o-border-radius: 8px;
 }
 
-header main #button:hover {
-  opacity: 0.9;
-  transition: 700ms;
-  -webkit-transition: 700ms;
-  -moz-transition: 700ms;
-  -ms-transition: 700ms;
-  -o-transition: 700ms;
+header main .button:hover {
+  background: #20095f;
+  box-shadow: 0 10px 15px #868080;
+  transition: 300ms;
+  -webkit-transition: 300ms;
+  -moz-transition: 300ms;
+  -ms-transition: 300ms;
+  -o-transition: 300ms;
 }
 
 /* complete  State*/
