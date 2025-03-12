@@ -38,11 +38,10 @@ card_form.addEventListener("submit", function (ele) {
   allInput.forEach((empty) => {
     empty.value = ``;
   });
-  ele.preventDefault(); // منع إعادة تحميل الصفحة
+  ele.preventDefault(); 
 });
 
 let btn = document.querySelector(".btn");
-
 
 btn.onclick = function() {
   complete.style.display = "none";
