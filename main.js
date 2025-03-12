@@ -34,19 +34,17 @@ card_form.addEventListener("submit", function (ele) {
     cvcNumber.style.setProperty("--before-content", `"${inpCvc.value.trim()}"`);
     complete.style.display = "flex";
     card_form.style.display = "none";
-  } else {
-    normal();
   }
   allInput.forEach((empty) => {
     empty.value = ``;
   });
   ele.preventDefault(); // منع إعادة تحميل الصفحة
 });
-let btn = document.querySelector(".button");
 
-btn.onclick = normal;
+let btn = document.querySelector(".btn");
 
-function normal() {
+
+btn.onclick = function() {
   complete.style.display = "none";
   card_form.style.display = "block";
   userName.textContent = "Jane Appleseed";
